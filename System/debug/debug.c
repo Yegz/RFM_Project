@@ -7,8 +7,8 @@
  **/
 
 #include "debug.h"
-
-
+#include "delay.h"
+#include "system_stm32f0xx.h"
 
 /**************************************************************************************
 * Data
@@ -19,7 +19,8 @@
 **************************************************************************************/
 void p_dr_UartDebug(void)
 {
-
+	static u8 i = 0;
+    printf("-->> aaaa %d, %d\r\n", i++, SystemCoreClock);
+    delay_ms(1000);
 }
-
 

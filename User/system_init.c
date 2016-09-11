@@ -6,7 +6,13 @@
  *
  **/
 #include "system_init.h"
-
+#include "cdr01uart.h"
+#include "cdr02spi.h"
+#include "cdr03rfm65.h"
+#include "cdr04rfm67.h"
+#include "cdr05rfm69.h"
+#include "delay.h"
+#include "debug.h"
 
 /***************************************************************************************
 * Data
@@ -15,8 +21,18 @@
 /**************************************************************************************
 * Function Implementation
 **************************************************************************************/
+/*************************************************************************************
+    Function Name: p_init_SystemInit
+    Input        : NULL
+    Output       : NULL
+    Return       : NULL
+    Description  : System Init
+**************************************************************************************/
 void p_init_SystemInit(void)
 {
-
+ 	SystemInit();
+	delay_init(48);
+    p_cdr01_UartInit();
+    p_cdr02_SpiInit();
 }
 
