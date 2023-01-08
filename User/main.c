@@ -19,6 +19,7 @@
 **************************************************************************************/
 int main(int argc, char *argv[])
 {
-    p_init_SystemInit();	
+    p_init_SystemInit();
+
 	return 0;
 }
